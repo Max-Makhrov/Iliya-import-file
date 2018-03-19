@@ -167,6 +167,10 @@ function getDataFromSheet_(fileId, sheetName, rangeName, sqlText)
 // combine 2d arrays of different sizes
 function combine2DArrays_(arrays)
 {
+  
+  // check 2D-arryas are not empty
+  if (arrays.length === 1 && arrays[0].length === 0) { return arrays[0]; }
+  
   // detect max L
   var l = 0;
   var row = [];
